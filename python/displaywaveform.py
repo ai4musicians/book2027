@@ -2,7 +2,7 @@
 !rm -rf book2027
 !git clone https://github.com/ai4musicians/book2027.git
 !ls -R book2027
-!pip install -q librosa soundfile matplotlib
+!pip install -q librosa matplotlib
 import librosa
 import librosa.display
 import matplotlib.pyplot as plt
