@@ -1,4 +1,7 @@
 # generatesound.ipynb
+def calculate_frequency(note):
+  # 49 is A4, 440 Hz
+  return 440 * (2 ** ((note - 49) / 12))
 import numpy as np
 def generate_sine_wave(frequency, duration, sampling_rate):
   t = np.linspace(0., duration, int(sampling_rate * duration), endpoint=False)
@@ -6,9 +9,6 @@ def generate_sine_wave(frequency, duration, sampling_rate):
   # Scale to 16-bit integer format (standard for WAV files)
   audio_data = (audio_data * 32767).astype(np.int16)
   return audio_data
-def calculate_frequency(note):
-  # 49 is A4, 440 Hz
-  return 440 * (2 ** ((note - 49) / 12))
 C3 = 38
 B5 = 63
 all_notes = []
