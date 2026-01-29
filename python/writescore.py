@@ -1,8 +1,8 @@
 # writescore.py
-# %%capture
-# import music21
-# !apt-get update
-# !apt-get install musescore3
+%%capture
+import music21
+!apt-get update
+!apt-get install musescore3
 import music21
 def list2score(notes: list, type = "eighth"):
     score = music21.stream.Score()
